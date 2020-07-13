@@ -1,59 +1,143 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title> Mfon's Portfolio</title>
-	<link rel="stylesheet" href="portfolio.css" type="text/css" media="all"/>
-</head>
-<body>
-<nav id="navbar">
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#Social_Media">Social</a>
-</nav>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #A1689C;
+  margin: 0;
+}
+nav {
+  background-color:#955FAB;
+  color: pink;
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+nav a {
+  color: pink;
+  margin-left: 20px;
+  position: relative;
+  text-decoration: none;
+}
+nav a::after {
+  content: '';
+  border-bottom: 3px solid pink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+nav a:hover::after {
+  opacity: 1;  transform: translateY(0px);
+}
+header {
+  background-image: url('https://images.unsplash.com/photo-1532708059644-5590ed51ce4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+ background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+  color: #EDD4E7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+header h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+header p {
+  font-size: 30px;
+  margin: 0;
+}
+section {
+  text-align: center;
+  padding: 40px;
+}
+section h2 {
+  margin: 0;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 810px;
+  margin: 20px auto 0;
+}
+.project {
+  margin: 10px;
+  max-width: 250px;
+}
+.project img {
+  max-width: 100%;
+}
+.project p {
+  font-size: 20px;
+  margin-top: 10px;
+}
 
-<header id="about">
-  <div id="welcome-section">
-  <h1> Hello!😃</h1>
-    <p> My name is Mfon Nta </p>
-  <p> and I am a Web Developer </p>
-  </div>
-</header>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects-container">
-  <div class="project">
-   <a href="https://codepen.io/mfonnie/pen/MWaNJZP"> <img src="https://images.unsplash.com/photo-1518384401463-d3876163c195?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="online survey"></a>
-    <p>online Survey project</p>
-  </div>
-    <div class="project">
-   <a href="https://codepen.io/mfonnie/pen/dyYEmLv"> <img src="https://images.unsplash.com/photo-1549814892-f6a520afc97d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="tribute page"></a>
-    <p>Tribute Page</p>
-  </div>
-  <div class="project">
-   <a href="https://codepen.io/mfonnie/pen/XWXrVEv"> <img src="https://images.unsplash.com/photo-1577561776790-1a20c419b1a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Technical documentation"></a>
-    <p>Technical Documentation page</p>
-  </div>
-  <div class="project">
-   <a href="https://codepen.io/mfonnie/pen/BajBJGx"> <img src="https://images.unsplash.com/photo-1523131334934-166f1a2ba72f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="product landing page"></a>
-    <p>Product Landing Page</p>
-  </div>
-  </div>
-</section>
-
-<section id="Social_Media" class="bg-pinkish">
-  <h2>Social Media</h2>
-  <p> You can reach me on</p>
-  <ul class="social-ul">
-    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a><li>
-    <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a><li>
-    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a><li>
-    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a><li>
-    <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a><li>
-  </ul>
-</section>
-
-<footer>
-  Made with <i class="fas fa-heart"></i> by Mfon Nta  </footer>
-</body>
-</html>
+.bg-pinkish {
+  background-color: #F47CB0;
+  color: pink;
+}
+.social-ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.social-ul a {
+  border-radius: 50%;
+  border: 3px solid pink;
+  color: pink;
+  font-size: 30px;
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+header::after {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+header * {
+  position: relative;
+  z-index: 1;
+}
+footer {
+  background-color: #955FAB;
+  color: pink;
+  padding: 10px;
+  text-align: center;
+}
+footer .fa-heart {
+  color: red;
+}
+@media (max-width: 440px) {
+  section {
+    padding: 20px;
+  }
+}
